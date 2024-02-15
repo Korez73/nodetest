@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env npx jasmine",
     "compile": "cross-env npx babel src --out-dir .compiled --source-maps --watch"
   },
   "keywords": [],
@@ -13,9 +13,18 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.23.9",
-    "@babel/core": "^7.23.9"
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-debug": "^5.0.1",
+    "jasmine": "^5.1.0"
   },
   "dependencies": {
-    "cross-env": "^7.0.3"
+    "body-parser": "^1.20.2",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.2",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9"
   }
 }

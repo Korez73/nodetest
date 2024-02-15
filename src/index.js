@@ -1,3 +1,12 @@
-import {HelloWorld} from './helloWorld.js';
+"use strict"
 
-new HelloWorld().sayHello();
+import {ApiClient} from "./apiClient.js"
+
+var apiClient = new ApiClient();
+apiClient.getTasks()
+    .then(data => {
+        console.log(`I got back ${data.length} rows`);
+    })
+    .catch(err => {
+        console.log(`Something went horribly wrong: ${err}`);
+    });
